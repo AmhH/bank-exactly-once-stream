@@ -24,7 +24,7 @@ public class BankTransactionsProducerTest {
         try {
             JsonNode node = mapper.readTree(value);
             assertEquals("john", node.get("name").asText());
-            //assertTrue("Amount should be less than 100", node.get("amount").asInt() < 100);
+            assertTrue(/*"Amount should be less than 100",*/ node.get("amount").asInt() < 100);
         } catch (IOException e) {
             e.printStackTrace();
         }
